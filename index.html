@@ -56,8 +56,43 @@
         color: red;
         padding: 10px;
     }
+    .message img {
+        width: 20%;
+        margin-left: 50px;
+        border-style: dotted;
+        border-width: 5px;
+    }
 </style>
-<body>
+<script>
+    var context;
+    var x=100;
+    var y=200;
+    var dx=5;
+    var dy=5;
+
+    function init() {
+        context = myCanvas.getContext('2d');
+        setInterval(draw, 10);
+    }
+
+    function draw() {
+        context.clearRect(0, 0, 600, 600);
+        context.beginPath();
+        context.fillStyle="#0000ff";
+        context.arc(x, y, 20, 0, Math.PI*2, true);
+        context.closePath();
+        context.fill();
+        if (x < 30 || x > 480) {
+            dx = -dx;
+        }
+        if (y < 30 || y > 500) {
+            dy = -dy;
+        }
+        x += dx;
+        y += dy;
+    }
+</script>
+<body onLoad="init();">
     <div class="main">
             <div class="center-body">
                 <p>🎂 Happy Birthday, <span style="color: red;">Nick</span>! 🎂</p>
@@ -104,13 +139,17 @@
                 <img src="nick19.jpg">
                 <img src="nick20.jpg">
             </div>
+            <canvas id="myCanvas" height="600" width="600">
+            </canvas>
             <ul class="message-container">
                 <li class="message">
                     <p>Yang</p>
+                    <img src="signers/yang.jpg" alt="">
                     <p>"There are never going to be the right words to describe what you mean to me!" Hehe. You've always had my back for the longest time and in spite of every frustration, worry, and THOSE F THINGS that I've come to you about we've always had the best time building a product from all of those conversations. Love you dude. Happy birthday!</p>
                 </li>
                 <li class="message">
                     <p>Ammar</p>
+                    <img src="signers/ammar.jpeg" alt="">
                     <p>Happy Birthday Nick,<br>
                         Well it's been somewhat of a long ride (not a bike ride though). There is one thing in this world that exists and two things that do not exist. The first existence is that of thought. Thought is something that is infinitely expanding as the electricity in your cells spark and reach a greater state of plane. Thought is one of the most beautiful things as it leads to communication which is pivotal to relationships of all sorts. The first non-existence is that of truth. Truth is something that is fun to have but also at the same time something that can hinder the mind when applied poorly. The search for truth is something to not be denied but the achieval of truth must certainly be questioned. The second non-existence is that of the Bianchi sweatshirt. It is a corporeal thing that evades the mind and physical plane whenever encountered. One day maybe this great beast will be encountered. To end with my thesis, the one piece is real, but that's because you are in one piece, therefore you are real.<br>
                         From,<br>
@@ -119,92 +158,116 @@
                 </li>
                 <li class="message">
                     <p>San</p>
+                    <img src="signers/san.jpg" alt="">
                     <p>HAPPY BIRTHDAY NICH<br>
                     UWUWUWUWU</p>
                 </li>
                 <li class="message">
                     <p>Nikhil</p>
+                    <img src="signers/nikhil.jpg" alt="">
                     <p>HBD or NBD? Jk jk, happy birthday to the coolest Nick I know!</p>
                 </li>
                 <li class="message">
                     <p>Mohammad</p>
+                    <img src="signers/mohammad.jpeg" alt="">
                     <p>Happy birthday Nick! You're a real character haha, it's crazy how the first thing you said to me was "do you play Minecraft?? Let's get on my server tonight!" and now we live together lmao. It's been such a great privilege to be one of your close friends for the past few years, and you're 20 now so ok wow. I hope your bday is so awesome, and that you know I always got your back (even though I catch you helping me out a lot more than I can help you out haha). All that said, words can't really describe how much you mean to me and how much I value your brotherhood man. Love you more than you know. Also... :/</p>
                 </li>
                 <li class="message">
                     <p>Shreya</p>
+                    <img src="signers/shreya.jpeg" alt="">
                     <p>( ͡° ͜ʖ ͡°)</p>
                 </li>
                 <li class="message">
                     <p>Ryan</p>
+                    <img src="signers/ryan.jpeg" alt="">
                     <p>Happy birthday Nick now you can get your driver's license. Here's to another year.</p>
                 </li>
                 <li class="message">
                     <p>Dynthia Dong</p>
+                    <img src="signers/dynthia.jpeg" alt="">
                     <p>"Happy birthday!"<br>
                     I like simple.</p>
                 </li>
                 <li class="message">
                     <p>Jesse</p>
+                    <img src="signers/jesse.jpeg" alt="">
                     <p>Happy Birthday, Nick B. Day</p>
                 </li>
                 <li class="message">
                     <p>Armaan</p>
+                    <img src="signers/armaan.jpg" alt="">
                     <p>What's up Nick. Happy birthday. Keep winning.</p>
                 </li>
                 <li class="message">
                     <p>Shara</p>
+                    <img src="signers/shara.jpeg" alt="">
                     <p>Hi Nick, Happy Birthday!<br>
                     Thanks for always being there to listen to my rants and for supporting me. I'm lucky to have a friend as caring as you. I hope you have a lovely day and a wonderful year! :)</p>
                 </li>
                 <li class="message">
                     <p>Praveena</p>
+                    <img src="signers/praveena.jpg" alt="">
                     <p>Happy birthday, Nick!!! I'm grateful for a friend like you, who pushes me to be my best self. I hope this new year of your life is the most <b>wild</b> yet!!! Love you lots and many happy returns of the day! 💙</p>
                 </li>
                 <li class="message">
                     <p>Lindsay</p>
+                    <img src="signers/lindsay.jpg" alt="">
                     <p>Happy birthday, Nick!<br>
                     Congrats on another whole year of life! You're one of the most caring people I've ever met, and I really look up to all the times you've gone out of the way to help your friends. May this next year be filled with lots of brain cells and sexy bikes!</p>
                 </li>
                 <li class="message">
                     <p>Visrut</p>
+                    <img src="signers/visrut.jpeg" alt="">
                     <p>HBD Nick! Hope you get all the mecanum wheels and fixie bikes your heart desires!</p>
                 </li>
                 <li class="message">
                     <p>Rebecca</p>
+                    <img src="signers/rebecca.jpeg" alt="">
                     <p>Happy birthday to my fellow Scorpio and a bike god!</p>
                 </li>
                 <li class="message">
                     <p>April (JIAYI)</p>
+                    <img src="signers/april.jpg" alt="">
                     <p>Thanks for all of your effort in correcting my English. Happy birthday and wish the best for your journey! >▽<</p>
                 </li>
                 <li class="message">
                     <p>Steven</p>
+                    <img src="signers/steven.png" alt="">
                     <p>Happy birthday Nick!! Congrats on turning the big 2-0! Thanks for always telling me to get off my bed and do homework. </p>
                 </li>
                 <li class="message">
                     <p>Komal</p>
+                    <img src="signers/komal.jpeg" alt="">
                     <p>Happy birthday Nicholas Birthday, hope your day is as amazing as your bianchi pista! Expct to get nicko(ne)tined 20 times! <b>*aggressive face squeezes*</b></p>
                 </li>
                 <li class="message">
                     <p>Aidan</p>
+                    <img src="signers/aidan.png" alt="">
                     <p>Happy birthday Nick you lovable bastard! Thanks for all the massages and doing all of my comp homework for me! Also love you so much and thanks for always being there for me no matter what. It's crazy to think that we didn't even know each other 2 years ago and now you're one of my closest friends! Congrats on the big 20! </p>
                 </li>
                 <li class="message">
                     <p>Jayraj</p>
+                    <img src="signers/jayraj.jpeg" alt="">
                     <p>Happy birthday Nick, can you feel your EQ rising?</p>
                 </li>
                 <li class="message">
                     <p>Pearl</p>
+                    <img src="signers/pearl.jpg" alt="">
                     <p>Hey Nick! HAPPY BIRTHDAY!!! Ahh it's been so cool to see how things have changed over the years since the good old ECG days. You're so old nowwww. Thanks for the 10/10 massages and being a good support for me and all the people I care about!</p>
-                    <img src="panda.jpg" alt="" style="height: 120px;">:)
+                    <img src="panda.jpg" alt="" style="width: 140px;">:)
+                </li>
+                <li class="message">
+                    <p>Jillian</p>
+                    <img src="signers/jillian.jpg" alt="">
+                    <p>Happy Birthday! Now that you're almost legal maybe you can explain the purpose of life in a way that makes sense and maybe one day I'll run in to you and you're actually biking the same way I'm walking! Hope you have a great one!</p>
                 </li>
                 <li class="message">
                     <p>Sandy</p>
                     <p>Happy Birthday Nick!!! Hope your 20 is freaking amazing and hope you have a lot of fun... but not too much though.</p>
                 </li>
             </ul>
-
     </div>
 </body>
+
 
 </html>
